@@ -1,35 +1,22 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-  import TailwindCss from './TailwindCss.svelte'
+  import TailwindCss from "./TailwindCss.svelte";
 </script>
 
 <TailwindCss />
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+<div class="w-full h-screen flex flex-col">
+  <header class="w-full h-12 bg-slate-200">
+    <p>header</p>
+  </header>
+  <div class="h-full flex flex-row">
+    <div id="sidebar" class="w-56 h-full bg-slate-100">
+      <p>sidebar</p>
+    </div>
+    <main class="h-full grow bg-slate-50">
+      <p>main area</p>
+    </main>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+</div>
 
 <style>
   .logo {
